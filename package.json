@@ -1,0 +1,50 @@
+{
+  "name": "wait-for-target",
+  "version": "0.0.0",
+  "description": "Wait for a target is ready",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "standard && ava",
+    "prepublish": "babel index.js --out-dir dist",
+    "postpublish": "rm -rf dist && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrepolischuk/wait-for-target.git"
+  },
+  "keywords": [
+    "wait",
+    "target",
+    "ready"
+  ],
+  "author": "Andrey Polischuk <me@andrepolischuk.com> (https://andrepolischuk.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrepolischuk/wait-for-target/issues"
+  },
+  "homepage": "https://github.com/andrepolischuk/wait-for-target#readme",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-cli": "^6.24.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-register": "^6.24.0",
+    "standard": "^10.0.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  }
+}
