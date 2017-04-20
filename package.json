@@ -1,6 +1,6 @@
 {
   "name": "wait-for-target",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Wait for a target is ready",
   "main": "dist/index.js",
   "files": [
