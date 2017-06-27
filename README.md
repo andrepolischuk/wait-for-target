@@ -24,7 +24,7 @@ push('ready')
 
 ## API
 
-### waitForTarget(getTarget)
+### waitForTarget(getTarget[, timeout])
 
 Return a promise that resolves to target when ready.
 
@@ -33,6 +33,13 @@ Return a promise that resolves to target when ready.
 Type: `function`
 
 Function returns a target for resolve.
+
+#### timeout
+
+Type: `number`  
+Default: `Infinity`
+
+Waiting timeout.
 
 ## License
 
