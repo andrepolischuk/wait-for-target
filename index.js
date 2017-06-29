@@ -5,13 +5,13 @@ export default function waitForTarget (getTarget, timeout = Infinity) {
     function wait () {
       const target = getTarget()
 
-      if (Date.now() >= limit) {
-        reject(new Error('Waiting time is over'))
+      if (target) {
+        resolve(target)
         return
       }
 
-      if (target) {
-        resolve(target)
+      if (Date.now() > limit) {
+        reject(new Error('Waiting time is over'))
         return
       }
 
